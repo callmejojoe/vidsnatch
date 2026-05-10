@@ -9,6 +9,7 @@ SERVER_PID=$!
 # Wait for server to start then open browser
 sleep 1.5
 xdg-open "http://localhost:7979" 2>/dev/null || \
+  zen-browser "http://localhost:7979" 2>/dev/null || \
   google-chrome "http://localhost:7979" 2>/dev/null || \
   firefox "http://localhost:7979" 2>/dev/null || \
   echo "Open http://localhost:7979 in your browser"
